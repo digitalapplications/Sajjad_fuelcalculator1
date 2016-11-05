@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:background="@drawable/images"
+    android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fuel Consumption"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/select_fuel" />
+          <EditText
+              android:id="@+id/edit2"
+             android:layout_marginLeft="10dp"
+              android:layout_width="match_parent"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="20dp"
+              android:background="@drawable/edit_text_style"
+              android:layout_height="50dp"
+
+              android:inputType="numberDecimal"/>
+
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+           <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginBottom="40dp"-->
+             <!--/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+
+        android:orientation="horizontal">
+
+
+        <RadioGroup
+            android:id="@+id/radio_fule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="220dp"
+            >
+
+            <RadioButton
+                android:id="@+id/fule_km"
+                android:layout_width="wrap_content"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:text="Km"
+                 />
+
+            <RadioButton
+                android:id="@+id/fule_miles"
+                android:layout_width="wrap_content"
+
+                android:text="Miles"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Travel Distance"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:id="@+id/distance" />
+
+        <EditText
+            android:id="@+id/distance_value"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="numberDecimal"/>
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="40dp"-->
+
+            <!--/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <RadioGroup
+            android:id="@+id/radio_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="220dp">
+
+            <RadioButton
+                android:id="@+id/distance_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Km"
+                 />
+
+            <RadioButton
+                android:id="@+id/distance_miles"
+                android:layout_width="wrap_content"
+                android:text="Miles"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fuel Price"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:id="@+id/fuel_price" />
+
+        <EditText
+            android:id="@+id/price_value"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:inputType="numberDecimal"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edit_text_style"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fuel Required"
+            android:textSize="20sp"
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:id="@+id/fuel_used" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"
+            android:background="@drawable/edit_text_style"
+            android:text="0"
+            android:textColor="@android:color/primary_text_light"
+
+            android:id="@+id/used_value" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fuel Required"
+            android:textSize="20sp"
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:id="@+id/fuel_used_gallon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"
+            android:background="@drawable/edit_text_style"
+            android:text="0"
+            android:textColor="@android:color/primary_text_light"
+
+            android:id="@+id/fule_gallon_value" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fuel Cost"
+            android:textSize="20sp"
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:id="@+id/cast" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:textSize="20sp"
+            android:background="@drawable/edit_text_style"
+            android:text="0"
+            android:textColor="@android:color/primary_text_light"
+            android:id="@+id/cost_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="120dp">
+
+
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_marginTop="40dp"
+            android:background="@drawable/btn_style"
+            android:onClick="Reset"
+
+        android:id="@+id/btn_reset" />
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:onClick="calculateResult"
+        android:background="@drawable/btn_style"
+        android:id="@+id/button"
+        />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</ScrollView>

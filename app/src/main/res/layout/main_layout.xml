@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:theme="@style/myCustomToolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="#8E24AA"
+
+       >
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:text="Fuel Calculator"
+            android:typeface="serif"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4">
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:id="@+id/edit2"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:typeface="serif"
+            android:hint="Fuel Consumption (Mileage)"
+            android:textColorHint="#fff"
+            android:layout_marginLeft="4dp"
+            android:maxLength="5"
+            android:textColor="#fff"
+            android:background="@drawable/edit_text_style"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_weight="0.6">
+
+        <RadioGroup
+            android:id="@+id/radio_fule"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp">
+
+            <RadioButton
+                android:id="@+id/fule_km"
+                android:typeface="serif"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#000"
+                android:buttonTint="@color/purpule"
+                android:layout_width="0dp"
+                android:checked="true"
+                android:layout_height="match_parent"
+                android:text="Km/liter"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/fule_miles"
+                android:layout_width="0dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:buttonTint="@color/purpule"
+                android:text="Miles/gallon"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:typeface="serif"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_weight="0.4">
+
+        <EditText
+            android:id="@+id/distance_value"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_width="match_parent"
+            android:hint="Traveling Distance"
+            android:textColor="#fff"
+            android:maxLength="5"
+            android:typeface="serif"
+            android:textColorHint="#fff"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_style"
+            android:inputType="numberDecimal"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_weight="0.6">
+
+        <RadioGroup
+            android:id="@+id/radio_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+
+            >
+
+            <RadioButton
+                android:id="@+id/distance_km"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:buttonTint="@color/purpule"
+                android:textColor="#000"
+                android:text="Km"
+                android:typeface="serif"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/distance_miles"
+                android:buttonTint="@color/purpule"
+                android:layout_width="wrap_content"
+                android:text="Miles"
+                android:textColor="#000"
+                android:typeface="serif"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:checked="false" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_weight="0.4">
+
+        <EditText
+            android:id="@+id/price_value"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:hint="Fuel Price/liter"
+            android:textColorHint="#fff"
+            android:layout_marginLeft="4dp"
+            android:typeface="serif"
+            android:maxLength="5"
+            android:textColor="#fff"
+            android:background="@drawable/edit_text_style"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:text="Reset"
+            android:background="@drawable/btn_style"
+            android:onClick="Reset"
+            android:id="@+id/btn_reset"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:typeface="serif"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:text="Convert"
+            android:typeface="serif"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="5dp"
+            android:textColor="#fff"
+            android:onClick="calculateResult"
+            android:background="@drawable/btn_style"
+            android:id="@+id/button"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_weight="1.80">
+
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:id="@+id/used_value"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:id="@+id/fule_gallon_value"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:typeface="serif"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:id="@+id/cost_value"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#fff"
+        android:alpha="0.89"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id" />
+    </LinearLayout>
+</LinearLayout>
